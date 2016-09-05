@@ -1,0 +1,19 @@
+{
+    "name": "smooth-scroll"
+    , "version": "1.0.0"
+    , "description": "A boilerplate for smooth scroll for web sites, contains html5, css3 and js files"
+    , "main": "index.js"
+    , "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    }
+    , "repository": {
+        "type": "git"
+        , "url": "git+https://github.com/meshnesh/smooth-scroll.git"
+    }
+    , "author": "Antony Ng'ang'a"
+    , "license": "MIT"
+    , "bugs": {
+        "url": "https://github.com/meshnesh/smooth-scroll/issues"
+    }
+    , "homepage": "https://github.com/meshnesh/smooth-scroll"
+}
