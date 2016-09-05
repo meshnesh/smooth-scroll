@@ -38,31 +38,31 @@
     //////////////////////
     // Scroll Module
     //////////////////////
-    var ScrollManager = (function () {
+    var ScrollManager = function () {
         var defaults = {
-                steps: null
-                , navigationContainer: null
-                , links: null
-                , scrollToTopBtn: null
-                , navigationElementClass: '.Quick-navigation'
-                , currentStepClass: 'current'
-                , smoothScrollEnabled: true
-                , stepsCheckEnabled: true, // Callbacks
-                onScroll: null
-                , onStepChange: function (step) {
-                    var self = this;
-                    var relativeLink = [].filter.call(options.links, function (link) {
-                        link.classList.remove(self.currentStepClass);
-                        return link.hash === '#' + step.id;
-                    });
-                    relativeLink[0].classList.add(self.currentStepClass);
-                }, // Provide a default scroll animation
-                smoothScrollAnimation: function (target) {
-                    $('html, body').animate({
-                        scrollTop: target
-                    }, 'slow');
-                }
+            steps: null
+            , navigationContainer: null
+            , links: null
+            , scrollToTopBtn: null
+            , navigationElementClass: '.Quick-navigation'
+            , currentStepClass: 'current'
+            , smoothScrollEnabled: true
+            , stepsCheckEnabled: true, // Callbacks
+            onScroll: null
+            , onStepChange: function (step) {
+                var self = this;
+                var relativeLink = [].filter.call(options.links, function (link) {
+                    link.classList.remove(self.currentStepClass);
+                    return link.hash === '#' + step.id;
+                });
+                relativeLink[0].classList.add(self.currentStepClass);
+            }, // Provide a default scroll animation
+            smoothScrollAnimation: function (target) {
+                $('html, body').animate({
+                    scrollTop: target
+                }, 'slow');
             }
+        }
             , options = {};
         // Privates
         var _animation = null
@@ -141,7 +141,7 @@
                 options.navigationContainer.removeEventListener('click', this.doSmoothScroll);
             }
         }
-    })();
+    };
     //////////////////////
     // END scroll Module
     //////////////////////
@@ -181,4 +181,4 @@
     //////////////////////
     // END APP init
     //////////////////////
-})();
+});
